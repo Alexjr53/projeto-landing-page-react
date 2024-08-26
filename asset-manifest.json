@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projeto-landing-page-react/static/css/main.17b6cd6f.css",
+    "main.js": "/projeto-landing-page-react/static/js/main.af4a9ad5.js",
+    "static/media/bg_parallax.jpg": "/projeto-landing-page-react/static/media/bg_parallax.e676446333edf364bafc.jpg",
+    "static/media/bg1.jpg": "/projeto-landing-page-react/static/media/bg1.c456223def251bc07deb.jpg",
+    "index.html": "/projeto-landing-page-react/index.html",
+    "main.17b6cd6f.css.map": "/projeto-landing-page-react/static/css/main.17b6cd6f.css.map",
+    "main.af4a9ad5.js.map": "/projeto-landing-page-react/static/js/main.af4a9ad5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17b6cd6f.css",
+    "static/js/main.af4a9ad5.js"
+  ]
+}
