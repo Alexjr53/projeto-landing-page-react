@@ -1,0 +1,79 @@
+.teamSection {
+  padding: 7rem 3rem;
+  margin-top: 7rem;
+  background-image: url(/src/assets/images/bg_parallax.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.teamSection .title{
+  font-size: 3rem;
+  color: white;
+  padding-left: 5rem;
+}
+
+.borderEffect {
+  width: 5rem;
+  height: 0.5rem;
+  background-color: #2692FF;
+  margin-bottom: 1rem;
+}
+
+.teamContainer {
+  display: flex;
+  justify-content: center;
+  height: 60rem; /*temporario */
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.teamMember {
+  width: 40%;
+  padding: 2rem;
+  box-sizing: border-box;
+  border: 0.1rem solid white;
+  color: white;
+  background-color: #002a5e;
+}
+
+.topBoxUser {
+  display: flex;
+  align-items: center;
+}
+
+.boxAvatar {
+  background-color: gray;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.boxAvatar img {
+  width: 100%;
+  height: auto;
+}
+
+.infoUser .memberName{
+  font-size: 1.6rem;
+  font-Weight: bold;
+}
+
+.infoUser .memberDescription{
+  font-size: 1.4rem;
+  font-Style: italic;
+}
+
+.infoUser .memberDescription{
+  font-size: 1.4rem;
+  font-Style: italic;
+}
+
+.descriptionUserBox {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}

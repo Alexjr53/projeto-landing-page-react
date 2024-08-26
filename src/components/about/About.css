@@ -1,0 +1,69 @@
+.aboutSection {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutSection .aboutContent{
+    width: 90rem;
+    padding-top: 12rem;
+}
+  
+  .aboutSection .aboutTitle {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.aboutSection .aboutTitle span{
+    color: #007bff;
+}
+  
+.aboutSection .aboutText{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.aboutSection .aboutContent .valuesContainer{
+    padding: 0 3rem;
+}
+
+.aboutSection .aboutContent .valuesContainer h3{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+}
+
+.aboutSection .aboutContent .valuesContainer p{
+    font-size: 1.5rem;
+}
+
+.aboutSection .aboutContent .valuesContainer ul{
+    list-style: inside;
+}
+
+.aboutSection .aboutContent .valuesContainer ul li{
+    font-size: 1.5rem;
+}
+
+.aboutSection .aboutContent .valuesContainer ul li span{
+    font-weight: 600;
+}
+  
+.aboutSection .backHome {
+    align-self: start;
+    padding: 1rem 2rem;
+    margin: 5rem;
+    position: fixed;
+    font-size: 1.6rem;
+    color: white;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+  
+.aboutSection .backHome:hover {
+    background-color: #0056b3;
+}
