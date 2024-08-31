@@ -1,6 +1,5 @@
 .main{
-    height: 100%;
-    /* padding: 1rem 3rem; */
+    height: 100vh;
     background-image: url(/src/assets/images/bg1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -21,38 +20,8 @@
     z-index: 1;
 }
 
-.main .header{
-    width: 80%;
-    height: 9rem;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    border-bottom: 0.3rem solid white;
-    padding-bottom: 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-.main .header .logo h1{
-    font-size: 2.3rem;
-    color: white;
-}
-
-.main .header .navBar .navMenu{
-    display: flex;
-    gap: 3rem;
-    list-style: none;
-    padding: 0.5rem 2rem;
-}
-
-.main .header .navBar .navMenu li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.7rem;
-}
-
 .mainContent{
-    height: 80%;
+    height: 100%;
     width: 80%;
     z-index: 1;
     display: flex;
@@ -96,4 +65,29 @@
 
 .mainContent .btnLink:hover{
     background-color: #1a6ab8;
+}
+
+@media(max-width: 970px){
+    .mainContent{
+        width: 90%;
+    }
+    
+    .mainContent h2{
+        font-size: 3.5rem;
+    }
+    
+    .mainContent h2 span{
+        font-size: 3.5rem;
+    }
+    
+    .mainContent p{
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+    
+    .mainContent .btnLink{
+        width: 14rem;
+        font-size: 1.5rem;
+    }
 }
