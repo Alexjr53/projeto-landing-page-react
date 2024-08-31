@@ -1,20 +1,13 @@
 import './Global.css';
-import Home from './components/home/Home';
-import About from './components/about/About'
-import Contact from './components/contact/Contact';
-import Product from './components/product/Product';
-import { HashRouter, Routes, Route } from 'react-router-dom';
-
+import { HashRouter } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
+import Header from './components/header/Header'
 
 function App() {
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Header/>
+      <AppRoutes></AppRoutes>
     </HashRouter>
   );
 }
