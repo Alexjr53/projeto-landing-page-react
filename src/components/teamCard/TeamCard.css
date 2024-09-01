@@ -1,7 +1,6 @@
 .teamMember {
   width: 40%;
   padding: 2rem;
-  box-sizing: border-box;
   border: 0.1rem solid white;
   color: white;
   background-color: #002a5e;
@@ -44,4 +43,11 @@
 .descriptionUserBox {
   margin-top: 1rem;
   font-size: 1.7rem;
+}
+
+
+@media(max-width: 970px){
+  .teamMember {
+    width: 30rem;
+  }
 }

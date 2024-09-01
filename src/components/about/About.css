@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     color: white;
-    padding-top: 14rem;
+    padding-top: 10.5rem;
 }
 
 .aboutSection .aboutContent {
@@ -34,6 +34,7 @@
 .aboutSection .aboutContent .valuesContainer h3 {
     font-size: 1.7rem;
     margin-top: 1rem;
+    color: #2692FF;
 }
 
 .aboutSection .aboutContent .valuesContainer p {
@@ -50,34 +51,12 @@
 
 .aboutSection .aboutContent .valuesContainer ul li span {
     font-weight: 600;
-}
-
-.aboutSection .backHome {
-    align-self: start;
-    padding: 1rem 2rem;
-    margin: 5rem;
-    position: fixed;
-    font-size: 1.6rem;
-    color: white;
-    background-color: #007bff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.aboutSection .backHome:hover {
-    background-color: #0056b3;
+    color: #2692FF;
 }
 
 .teamSection {
     padding: 7rem 3rem;
     margin-top: 7rem;
-    /* background-image: url(/src/assets/images/bg_parallax.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
 }
 
 .teamSection .title {
@@ -96,8 +75,30 @@
 .teamContainer {
     display: flex;
     justify-content: center;
-    height: 60rem;
+    height: 100%;
     flex-wrap: wrap;
     gap: 4rem;
     margin-top: 3rem;
+}
+
+@media(max-width: 970px){
+    .aboutSection .aboutContent {
+        width: 90%;
+    }
+
+    .teamSection .title {
+        font-size: 2.4rem;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .borderEffect {
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .aboutSection {
+        padding-top: 8rem;
+    }
 }
