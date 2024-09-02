@@ -89,16 +89,23 @@ textarea {
     cursor: pointer;
 }
 
+@media(max-width: 1024px) {
+    .container {
+        height: 60rem;
+        width: 100%;
+    }
+}
+
 @media(max-width: 700px) {
     .contactSection {
-        height: 100vh;
+        height: 100%;
         display: flex;
         align-items: start;
         padding: 15rem 3rem 0;
     }
 
     .container {
-        height: 97%;
+        height: 65rem;
         width: 100%;
         flex-direction: column;
     }
@@ -135,12 +142,62 @@ textarea {
 
     .form {
         width: 40rem;
-        height: 39rem;
-        gap: 2rem;
+        height: 30rem;
+        gap: 1rem;
     }
 
     .form textarea {
-        height: 16rem;
+        height: 11rem;
+        resize: none;
+    }
+}
+
+@media(max-width: 430px) {
+    .container {
+        height: 65rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media(max-width: 375px) {
+    .contactSection {
+        height: 100%;
+        padding: 12rem 1.5rem 0;
+    }
+    
+    .container {
+        height: 63rem;
+    }
+
+    .contactBox h2{
+        font-size: 2rem;
+    }
+
+    .contactBox p{
+        font-size: 1.4rem;
+    }
+
+    .formContainer {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        margin-top: 3rem;
+        padding: 0 2rem;
+    }
+
+    .form {
+        width: 40rem;
+        height: 30rem;
+        gap: 1rem;
+    }
+
+    .form input{
+        height: 4rem;
+    }
+
+    .form textarea {
+        height: 10rem;
         resize: none;
     }
 }

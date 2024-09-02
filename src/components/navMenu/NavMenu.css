@@ -32,7 +32,6 @@
     padding: 1rem;
     border-bottom: 1px solid gray;
     display: block;
-    width: 100%;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
