@@ -41,8 +41,7 @@ function Contact() {
     }
 
     if (formIsValid) {
-      console.log('Formulário enviado com sucesso!');
-      
+      alert('Mensagem enviada com sucesso!')      
     }
   }
   
