@@ -1,6 +1,51 @@
 import './Contact.css'
+import { useRef, useState } from 'react';
 
 function Contact() {
+  const [isNameValid, setIsNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isMessageValid, setIsMessageValid] = useState(true);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+
+  const handleFormSubmit = ()=>{
+    const name = nameRef.current.value.trim();
+    const email = emailRef.current.value.trim();
+    const message = messageRef.current.value.trim();
+    
+    let formIsValid = true;
+
+    if (!name) {
+      setIsNameValid(false);
+      formIsValid = false
+      
+    }else{
+      setIsNameValid(true);
+    }
+
+    if (!email || !email.includes('@') || !email.endsWith('.com')) {
+      setIsEmailValid(false);
+      formIsValid = false
+      
+    }else{
+      setIsEmailValid(true);
+    }
+
+    if (!message) {
+      setIsMessageValid(false);
+      formIsValid = false
+    }else{
+      setIsMessageValid(true);
+    }
+
+    if (formIsValid) {
+      console.log('Formulário enviado com sucesso!');
+      
+    }
+  }
+  
   return (
     <section className="contactSection">
       <div className='container'>
@@ -24,10 +69,13 @@ function Contact() {
         </div>
         <div className='formContainer'>
           <form class="form">
-            <input className='input' type="text" placeholder="Nome*"></input>
-            <input className='input' type="email" placeholder="E-mail*"></input>
-            <textarea placeholder="Mensagem*"></textarea>
-            <input type='button' className='button' value='enviar'></input>
+            <input ref={nameRef} className='input' type="text" placeholder="Nome*"></input>
+            {!isNameValid && <p className='error'>Por favor, preencha o campo de Nome.</p>}
+            <input ref={emailRef} className='input' type="email" placeholder="E-mail*"></input>
+            {!isEmailValid && <p className='error'>Por favor digite um E-mail válido</p>}
+            <textarea ref={messageRef} placeholder="Mensagem*"></textarea>
+            {!isMessageValid && <p className='error'>Por favor, preencha o campo de MENSAGEM.</p>}
+            <input onClick={handleFormSubmit} type='button' className='button' value='enviar'></input>
           </form>
         </div>
       </div>
