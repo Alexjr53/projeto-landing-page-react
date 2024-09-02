@@ -23,7 +23,7 @@ function Header(){
       return()=>{
         window.removeEventListener('resize', handleResize);
       };
-    },[])
+    },[]);
 
     const handleClickMenu = () => setMenuOpen(!menuOpen);
 
@@ -37,7 +37,7 @@ function Header(){
             {isVisible ?  (<NavMenu className="navMenuDesktop"/>
             ) : (
               <>
-                <i onClick={handleClickMenu} className="menuMobileIcon fas fa-bars"></i>
+                <i onClick={handleClickMenu} className={`menuMobileIcon fas ${menuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 <div className={`menuMobileContainer ${menuOpen ? 'open' : 'closed'}`}><NavMenu className="navMenuMobile"/></div>
               </>
             )}
