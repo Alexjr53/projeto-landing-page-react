@@ -41,8 +41,15 @@ function Contact() {
     }
 
     if (formIsValid) {
-      alert('Mensagem enviada com sucesso!')      
+      alert('Mensagem enviada com sucesso!')
+      resetInputs()    
     }
+  }
+
+  const resetInputs = ()=>{
+    nameRef.current.value = ''
+    emailRef.current.value = ''
+    messageRef.current.value = ''
   }
   
   return (
