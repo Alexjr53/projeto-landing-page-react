@@ -1,5 +1,5 @@
-import ContactModal from '../contactModal/ContactModal';
 import './Contact.css'
+import ContactModal from '../contactModal/ContactModal';
 import { useRef, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -13,7 +13,7 @@ function Contact() {
   const messageRef = useRef(null);
 
 
-  const handleFormSubmit = () => {
+  const validateForm = () => {
     const name = nameRef.current.value.trim();
     const email = emailRef.current.value.trim();
     const message = messageRef.current.value.trim();
@@ -23,15 +23,13 @@ function Contact() {
     if (!name) {
       setIsNameValid(false);
       formIsValid = false
-
     } else {
       setIsNameValid(true);
     }
 
-    if (!email || !email.includes('@') || !email.endsWith('.com')) {
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setIsEmailValid(false);
       formIsValid = false
-
     } else {
       setIsEmailValid(true);
     }
@@ -43,11 +41,17 @@ function Contact() {
       setIsMessageValid(true);
     }
 
-    if (formIsValid) {
-      setIsModalOpen(true);
-      resetInputs()
-    }
+    return formIsValid
   }
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    
+    if (validateForm()) {
+      setIsModalOpen(true);
+      resetInputs();
+    }
+  };
 
   const resetInputs = () => {
     nameRef.current.value = ''
@@ -67,28 +71,28 @@ function Contact() {
           <p>Gostaria de saber mais sobre nossos serviços? Preencha o formulário e nossa equipe entrará em contato com você em breve.</p>
           <div className='contactOptions'>
             <div className='contact'>
-              <i class="far fa-envelope"></i>
+              <i className="far fa-envelope"></i>
               <p>email@gmail.com</p>
             </div>
             <div className='contact'>
-              <i class="fas fa-phone"></i>
+              <i className="fas fa-phone"></i>
               <p>(11) 99711-5309</p>
             </div>
             <div className='contact'>
-              <i class="fas fa-map-marker"></i>
+              <i className="fas fa-map-marker"></i>
               <p>location 33, rua aletoria. estado pais 08986454</p>
             </div>
           </div>
         </div>
         <div className='formContainer'>
-          <form class="form">
+          <form on onSubmit={handleFormSubmit} className="form">
             <input ref={nameRef} className='input' type="text" placeholder="Nome*"></input>
             {!isNameValid && <p className='error'>Por favor, preencha o campo de Nome.</p>}
             <input ref={emailRef} className='input' type="email" placeholder="E-mail*"></input>
             {!isEmailValid && <p className='error'>Por favor digite um E-mail válido</p>}
             <textarea ref={messageRef} placeholder="Mensagem*"></textarea>
             {!isMessageValid && <p className='error'>Por favor, preencha o campo de MENSAGEM.</p>}
-            <input onClick={handleFormSubmit} type='button' className='button' value='enviar'></input>
+            <input type='submit' className='button' value='enviar'></input>
           </form>
         </div>
       </div>

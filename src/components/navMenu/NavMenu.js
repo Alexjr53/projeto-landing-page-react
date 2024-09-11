@@ -6,7 +6,6 @@ function NavMenu({className}){
         <ul className={className}>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">Sobre</Link></li>
-            {/* <li><Link to="/product">Produtos</Link></li> */}
             <li><Link to="/contact">Contato</Link></li>
         </ul>
     )

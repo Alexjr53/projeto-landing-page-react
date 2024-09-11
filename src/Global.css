@@ -1,3 +1,7 @@
+#root{
+    background: linear-gradient(90deg, #111111,#1e1e1e,#323232);                                           
+}
+
 html{
     font-size: 62.5%;
 }
@@ -13,8 +17,4 @@ html, body, #root {
       padding: 0;
       box-sizing: border-box;
       font-family: "Open Sans";
-}
-
-#root{
-    background: linear-gradient(90deg, #111111,#1e1e1e,#323232);                                           
 }
