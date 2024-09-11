@@ -86,11 +86,11 @@ function Contact() {
         </div>
         <div className='formContainer'>
           <form on onSubmit={handleFormSubmit} className="form">
-            <input ref={nameRef} className='input' type="text" placeholder="Nome*"></input>
+            <input name='nome' ref={nameRef} className='input' type="text" placeholder="Nome*"></input>
             {!isNameValid && <p className='error'>Por favor, preencha o campo de Nome.</p>}
-            <input ref={emailRef} className='input' type="email" placeholder="E-mail*"></input>
+            <input name='email' ref={emailRef} className='input' type="email" placeholder="E-mail*"></input>
             {!isEmailValid && <p className='error'>Por favor digite um E-mail válido</p>}
-            <textarea ref={messageRef} placeholder="Mensagem*"></textarea>
+            <textarea name='mensagem' ref={messageRef} placeholder="Mensagem*"></textarea>
             {!isMessageValid && <p className='error'>Por favor, preencha o campo de MENSAGEM.</p>}
             <input type='submit' className='button' value='enviar'></input>
           </form>
