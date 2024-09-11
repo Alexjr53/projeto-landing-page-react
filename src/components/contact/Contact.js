@@ -1,7 +1,10 @@
+import ContactModal from '../contactModal/ContactModal';
 import './Contact.css'
 import { useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 function Contact() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const [isNameValid, setIsNameValid] = useState(true);
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isMessageValid, setIsMessageValid] = useState(true);
@@ -10,48 +13,52 @@ function Contact() {
   const messageRef = useRef(null);
 
 
-  const handleFormSubmit = ()=>{
+  const handleFormSubmit = () => {
     const name = nameRef.current.value.trim();
     const email = emailRef.current.value.trim();
     const message = messageRef.current.value.trim();
-    
+
     let formIsValid = true;
 
     if (!name) {
       setIsNameValid(false);
       formIsValid = false
-      
-    }else{
+
+    } else {
       setIsNameValid(true);
     }
 
     if (!email || !email.includes('@') || !email.endsWith('.com')) {
       setIsEmailValid(false);
       formIsValid = false
-      
-    }else{
+
+    } else {
       setIsEmailValid(true);
     }
 
     if (!message) {
       setIsMessageValid(false);
       formIsValid = false
-    }else{
+    } else {
       setIsMessageValid(true);
     }
 
     if (formIsValid) {
-      alert('Mensagem enviada com sucesso!')
-      resetInputs()    
+      setIsModalOpen(true);
+      resetInputs()
     }
   }
 
-  const resetInputs = ()=>{
+  const resetInputs = () => {
     nameRef.current.value = ''
     emailRef.current.value = ''
     messageRef.current.value = ''
   }
-  
+
+  const closeModal = () => {
+    setIsModalOpen(false); 
+  };
+
   return (
     <section className="contactSection">
       <div className='container'>
@@ -85,6 +92,11 @@ function Contact() {
           </form>
         </div>
       </div>
+      <AnimatePresence>
+        {isModalOpen && (
+          <ContactModal closeModal={closeModal}/>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

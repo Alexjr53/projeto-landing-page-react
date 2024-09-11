@@ -29,7 +29,7 @@
     font-size: 1.8rem;
 }
 
-.contactBox .contactOptions {
+.contactOptions {
     height: 27rem;
     display: flex;
     flex-direction: column;
@@ -38,13 +38,13 @@
     padding-left: 1.5rem;
 }
 
-.contactOptions .contact {
+.contact {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.contactOptions .contact i {
+.contact i {
     font-size: 2.3rem;
 }
 
@@ -92,14 +92,14 @@ textarea {
     padding: 0 1rem 1rem;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1200px) {
     .container {
         height: 60rem;
         width: 100%;
     }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 768px) {
     .contactSection {
         height: 100%;
         display: flex;
