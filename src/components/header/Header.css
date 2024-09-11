@@ -11,18 +11,18 @@
     backdrop-filter: blur(5px);
 }
 
-.header .logo h1 {
+.logo h1 {
     font-size: 2.3rem;
     color: white;
 }
 
-@media(max-width: 970px) {
+@media(max-width: 992px) {
     .header {
         padding: 0 5rem 1rem;
     }
 }
 
-@media(max-width: 785px) {
+@media(max-width: 768px) {
     .menuMobileContainer {
         background-color: rgb(250, 250, 250);
         position: absolute;

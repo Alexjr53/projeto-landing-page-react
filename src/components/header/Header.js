@@ -8,7 +8,7 @@ function Header(){
 
     useEffect(()=>{
       const handleResize = () =>{
-        if (window.innerWidth <= 785) {
+        if (window.innerWidth <= 768) {
           setIsVisible(false);
           setMenuOpen(false);
         }else{

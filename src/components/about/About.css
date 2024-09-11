@@ -7,49 +7,49 @@
     padding-top: 10.5rem;
 }
 
-.aboutSection .aboutContent {
+.aboutContent {
     width: 90rem;
     padding-top: 12rem;
 }
 
-.aboutSection .aboutTitle {
+.aboutTitle {
     font-size: 2.4rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.aboutSection .aboutTitle span {
+.aboutTitle span {
     color: #007bff;
 }
 
-.aboutSection .aboutText {
+.aboutText {
     font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
-.aboutSection .aboutContent .valuesContainer {
+.valuesContainer {
     padding: 0 3rem;
 }
 
-.aboutSection .aboutContent .valuesContainer h3 {
+.valuesContainer h3 {
     font-size: 1.7rem;
     margin-top: 1rem;
     color: #2692FF;
 }
 
-.aboutSection .aboutContent .valuesContainer p {
+.valuesContainer p {
     font-size: 1.5rem;
 }
 
-.aboutSection .aboutContent .valuesContainer ul {
+.valuesContainer ul {
     list-style: inside;
 }
 
-.aboutSection .aboutContent .valuesContainer ul li {
+.valuesContainer ul li {
     font-size: 1.5rem;
 }
 
-.aboutSection .aboutContent .valuesContainer ul li span {
+.valuesContainer ul li span {
     font-weight: 600;
     color: #2692FF;
 }
@@ -59,7 +59,7 @@
     margin-top: 7rem;
 }
 
-.teamSection .title {
+.title {
     font-size: 3rem;
     color: white;
     padding-left: 5rem;
@@ -81,8 +81,8 @@
     margin-top: 3rem;
 }
 
-@media(max-width: 970px){
-    .aboutSection .aboutContent {
+@media(max-width: 992px){
+    .aboutContent {
         width: 90%;
     }
 
