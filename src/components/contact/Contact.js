@@ -85,7 +85,7 @@ function Contact() {
           </div>
         </div>
         <div className='formContainer'>
-          <form on onSubmit={handleFormSubmit} className="form">
+          <form id='form' onSubmit={handleFormSubmit} className="form">
             <input name='nome' ref={nameRef} className='input' type="text" placeholder="Nome*"></input>
             {!isNameValid && <p className='error'>Por favor, preencha o campo de Nome.</p>}
             <input name='email' ref={emailRef} className='input' type="email" placeholder="E-mail*"></input>
